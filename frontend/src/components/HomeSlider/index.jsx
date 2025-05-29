@@ -10,6 +10,7 @@ const HomeSlider = () => {
     <div className='homeSlider py-4'>
        <div className="container">
         <Swiper 
+        loop={true}
         spaceBetween={10} 
         navigation={true} 
         autoplay={{
@@ -20,27 +21,27 @@ const HomeSlider = () => {
         className="sliderHome">
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-              <img src="https://api.spicezgold.com/download/file_1734524878924_1721277298204_banner.jpg" alt="Banner image" className='w-full' />
+              <img src="./Hero/Banner1.jpg" alt="Banner image" className='w-full' />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-             <img src="https://api.spicezgold.com/download/file_1734524930884_NewProject(6).jpg" alt="Banner image" className='w-full' />
+             <img src="./Hero/banner2.jpg" alt="Banner image" className='w-full' />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-            <img src="https://api.spicezgold.com/download/file_1734524971122_NewProject(8).jpg" alt="Banner image" className='w-full' />
+            <img src="./Hero/Banner3.jpg" alt="Banner image" className='w-full' />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-            <img src="https://api.spicezgold.com/download/file_1734524985581_NewProject(11).jpg" alt="Banner image" className='w-full' />
+            <img src="./Hero/Banner4.jpg" alt="Banner image" className='w-full' />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item rounded-[20px] overflow-hidden">
-            <img src="https://api.spicezgold.com/download/file_1734525002307_1723967638078_slideBanner1.6bbeed1a0c8ffb494f7c.jpg" alt="Banner image" className='w-full' />
+            <img src="./Hero/Banner5.jpg" alt="Banner image" className='w-full' />
             </div>
           </SwiperSlide>
         </Swiper>

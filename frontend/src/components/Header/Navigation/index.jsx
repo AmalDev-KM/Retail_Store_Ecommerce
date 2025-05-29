@@ -14,7 +14,7 @@ const Navigation = () => {
     }
   return (
     <>
-        <nav className='py-2'>
+        <nav>
             <div className="container flex items-center justify-end gap-8">
                 <div className="col1 w-[20%] ">
                     <Button className="!text-black !font-[550] gap-2 w-full" onClick={openCategorypanel}>
@@ -27,19 +27,19 @@ const Navigation = () => {
                     <ul className="flex items-center gap-5 nav">
                         <li className='list-none'>
                             <Link to="/" className="link transition text-[14px] font-[500]">
-                                <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]'>Home</Button>
+                                <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4'>Home</Button>
                             </Link>
                         </li>
 
                         <li className='list-none relative'>
                             <Link to="/" className="link transition text-[14px] font-[500]">
-                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]'>Electronics</Button>
+                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4'>Electronics</Button>
                             </Link>
 
                             <div className="submenu absolute top-[120%] min-w-[150px] bg-white shadow-md opacity-0 transition-all">
                                 <ul>
                                     <li className="list-none w-full relative">
-                                        <Link to="/" className='w-full'>
+                                        {/* <Link to="/" className='w-full'> */}
                                             <Button className='!text-[rgba(0,0,0,0.8)] w-full !text-left !justify-start !rounded-none hover:!text-[#ff5252]'>Smart Phones</Button>
                                             <div className="submenu absolute top-[0%] left-[100%] min-w-[150px] bg-white shadow-md opacity-0 transition-all">
                                                 <ul>
@@ -75,7 +75,7 @@ const Navigation = () => {
                                                 </ul>
 
                                             </div>
-                                        </Link>
+                                        {/* </Link> */}
                                     </li>
 
                                     <li className="list-none w-full">
@@ -110,37 +110,37 @@ const Navigation = () => {
 
                         <li className='list-none'>
                             <Link to="/" className="link transition text-[14px] font-[500]">
-                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]'>Bags</Button>
+                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4'>Bags</Button>
                             </Link>
                         </li>
 
                         <li className='list-none'>
                             <Link to="/" className="link transition text-[14px] font-[500]">
-                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]'>Footwear</Button>
+                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4'>Footwear</Button>
                             </Link>
                         </li>
 
                         <li className='list-none'>
                             <Link to="/" className="link transition text-[14px] font-[500]">
-                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]'>Groceries</Button>
+                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4'>Groceries</Button>
                             </Link>
                         </li>
 
                         <li className='list-none'>
                             <Link to="/" className="link transition text-[14px] font-[500]">
-                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]'>Beauty</Button>
+                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4'>Beauty</Button>
                             </Link>
                         </li>
 
                         <li className='list-none'>
                             <Link to="/" className="link transition text-[14px] font-[500]">
-                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]'>Wellness</Button>
+                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4'>Wellness</Button>
                             </Link>
                         </li>
 
                         <li className='list-none'>
                             <Link to="/" className="link transition text-[14px] font-[500]">
-                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252]'>Jewellery</Button>
+                            <Button className='link transition !font-[550] !text-[rgba(0,0,0,0.8)] hover:!text-[#ff5252] !py-4'>Jewellery</Button>
                             </Link>
                         </li>
                     </ul>

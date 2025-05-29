@@ -11,27 +11,37 @@ import { MdZoomOutMap } from "react-icons/md";
 const ProductItem = () => {
   return (
     <div className="productItem shadow-lg rounded-md overflow-hidden border-1 border-[rgba(0,0,0,0.1)]">
-      <div className="imgWrapper w-[100%] h-[220px] overflow-hidden rounded-md relative">
-        <img
-          src="https://www.jiomart.com/images/product/original/494423013/apple-iphone-16-128-gb-black-digital-o494423013-p609946224-0-202409111651.jpeg?im=Resize=(360,360)"
-          alt=""
-          srcset=""
-          className="w-full"
-        />
-        <span className="discount flex items-center absolute top-[10px] left-[10px] z-50 bg-primary text-white rounded-lg p-1 text-[12px] font-[500]">10%</span>
-        <div className="actions absolute top-[15px] right-[-10px] z-50 flex items-center gap-4 flex-col w-[80px]">
+      <div className="group imgWrapper w-[100%]  overflow-hidden rounded-md relative">
+        <Link to={"/"}>
+          <div className="img h-[220px] overflow-hidden">
+            <img
+              src="https://rukminim2.flixcart.com/image/832/832/xif0q/kurta/k/m/s/s-kt25-blue-sun-fashion-and-lifestyle-original-imah7ffy3gf2v7f8.jpeg?q=70&crop=false"
+              alt=""
+              srcset=""
+              className="w-full"
+            />
+            <img
+              src="https://rukminim2.flixcart.com/image/832/832/xif0q/kurta/w/v/c/s-kt25-blue-sun-fashion-and-lifestyle-original-imah7ffyam56zxyg.jpeg?q=70&crop=false"
+              alt=""
+              srcset=""
+              className="w-full transition-all duration-700 absolute top-0 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+            />
+          </div>
+        </Link>
+        <span className="discount flex items-center absolute top-[10px] left-[10px] z-50 bg-primary text-white rounded-lg p-1 text-[12px] font-[500]">
+          10%
+        </span>
+
+        <div className="actions absolute top-[-200px] right-[5px] z-50 flex items-center gap-4 flex-col w-[50px] transition-all duration-300 group-hover:top-[15px] opacity-0 group-hover:opacity-100">
           <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white hover:!bg-primary hover:text-white group">
-            <MdZoomOutMap className="text-[18px] text-black group-hover:text-white"/>
+            <MdZoomOutMap className="text-[18px] !text-black group-hover:text-white hover:!text-white" />
           </Button>
           <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white hover:!bg-primary hover:text-white group">
-            <MdZoomOutMap className="text-[18px] text-black group-hover:text-white"/>
+            <IoGitCompare className="text-[18px] !text-black group-hover:text-white hover:!text-white" />
           </Button>
           <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white hover:!bg-primary hover:text-white group">
-            <MdZoomOutMap className="text-[18px] text-black group-hover:text-white"/>
+            <FaRegHeart className="text-[18px] !text-black group-hover:text-white hover:!text-white" />
           </Button>
-          {/* <Button><FaRegHeart /></Button>
-          <Button><IoGitCompare /></Button>
-          <Button><MdZoomOutMap /></Button> */}
         </div>
       </div>
 
@@ -54,11 +64,11 @@ const ProductItem = () => {
         />
 
         <div className="flex items-center gap-4">
-          <span className="oldPrice line-through text-gray-500 text-[15px] font-[500]">$58</span>
+          <span className="oldPrice line-through text-gray-500 text-[15px] font-[500]">
+            $58
+          </span>
           <span className="Price text-primary text-[15px] font-[600]">$58</span>
-          
         </div>
-
       </div>
     </div>
   );

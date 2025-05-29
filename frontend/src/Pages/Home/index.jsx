@@ -9,6 +9,15 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import ProductSlider from "../../components/ProductSlider";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+
+import { Navigation } from "swiper/modules";
+import BlogItem from "../../components/BlogItem";
+import Footer from "../../components/Footer";
+import HomeBannerV2 from "../../components/HomeSliderV2";
+
 const Home = () => {
   const [value, setValue] = React.useState(0);
 
@@ -19,6 +28,14 @@ const Home = () => {
   return (
     <div>
       <HomeSlider />
+      {/* <section className="py-6">
+        <div className="container flex items-center">
+          <div className="part1 w-[70%]">
+            <HomeBannerV2 />
+          </div>
+        </div>
+      </section> */}
+
       <HomeCatSlider />
 
       <section className="bg-white py-8">
@@ -31,33 +48,32 @@ const Home = () => {
               </p>
             </div>
             <div className="rightSec w-[60%]">
-                <Tabs
-                  value={value}
-                  onChange={handleChange}
-                  variant="scrollable"
-                  scrollButtons="auto"
-                  aria-label="scrollable auto tabs example"
-                >
-                  <Tab label="Fashion" />
-                  <Tab label="Electronics" />
-                  <Tab label="Groceries" />
-                  <Tab label="Wellness" />
-                  <Tab label="Jewelery" />
-                  <Tab label="Beauty" />
-                  <Tab label="Groceries" />
-                  <Tab label="Wellness" />
-                  <Tab label="Jewelery" />
-                  <Tab label="Beauty" />
-                </Tabs>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                variant="scrollable"
+                scrollButtons="auto"
+                aria-label="scrollable auto tabs example"
+              >
+                <Tab label="Fashion" />
+                <Tab label="Electronics" />
+                <Tab label="Groceries" />
+                <Tab label="Wellness" />
+                <Tab label="Jewelery" />
+                <Tab label="Beauty" />
+                <Tab label="Groceries" />
+                <Tab label="Wellness" />
+                <Tab label="Jewelery" />
+                <Tab label="Beauty" />
+              </Tabs>
             </div>
           </div>
 
-          <ProductSlider items={6}/>
-
+          <ProductSlider items={6} />
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-4 pt-2 bg-white">
         <div className="container">
           <div className="freeshipping w-[80%] m-auto py-2 p-4 border-2 border-[#ff5252] flex items-center justify-between rounded-md mb-7">
             <div className="col1 flex items-center gap-4">
@@ -77,13 +93,51 @@ const Home = () => {
         </div>
       </section>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <section className="p-5 pt-0 bg-white">
+        <div className="container">
+          <h3 className="text-[20px] font-[600]">Latest Products</h3>
+          <ProductSlider items={6} />
+
+          <AdsBannerSlider items={3} />
+        </div>
+      </section>
+
+      <section className="p-5 pt-0 bg-white">
+        <div className="container">
+          <h3 className="text-[20px] font-[600]">Featured Products</h3>
+          <ProductSlider items={6} />
+          <AdsBannerSlider items={3} />
+        </div>
+      </section>
+
+      <section className="py-5 pt-0 bg-white blogSection">
+        <div className="container">
+          <h3 className="text-[20px] font-[600] mb-4">From the blog</h3>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            navigation={true}
+            modules={[Navigation]}
+            className="blogSlider"
+          >
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
     </div>
   );
 };

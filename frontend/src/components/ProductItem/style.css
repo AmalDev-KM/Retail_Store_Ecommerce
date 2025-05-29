@@ -2,3 +2,11 @@
     line-height: 16px;
 }
 
+.productItem .actions button:hover svg{
+    color: #fff !important;
+}
+
+/* .productItem .actions button:hover svg{
+    pointer-events: none !important;
+} */
+
